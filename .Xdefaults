@@ -1,0 +1,17 @@
+URxvt.scrollBar:         false
+URxvt.imLocale:          en_US.UTF-8
+URxvt.loginShell:        true
+URxvt.saveLines:         0
+URxvt.shading:           15
+URxvt.jumpScroll:        true
+URxvt.internalBorder:    0
+URxvt.cursorBlink:       false
+URxvt.cursorColor:       #dd9900
+URxvt.cursorColor2:      #000000
+URxvt.background:        #000000
+URxvt.foreground:        #ddccbb
+URxvt.colorBD:           #ffffff
+URxvt.colorIT:           #bbbbbb
+URxvt.colorUL:           #999999
+URxvt.underlineColor:    #999999
+URxvt.transparent:       true

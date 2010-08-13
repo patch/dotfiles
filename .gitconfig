@@ -1,0 +1,14 @@
+[user]
+    name = Nick Patch
+    email = n@atemoya.net
+[alias]
+    ci = commit -a
+    co = checkout
+    stat = status -a
+[diff]
+    color = auto
+[status]
+    color = auto
+[github]
+    user = patch
+    token = XXX
