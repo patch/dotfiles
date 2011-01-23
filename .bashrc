@@ -98,23 +98,19 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# nick
-alias rdp-nsk="rdesktop -u npatch -d NSK -g 99% -a 16 -0 192.168.254.176"
-
+# patch
 set -o vi
+
+alias ackt='ack --text'
+alias aptitude='aptitude --clean-on-startup'
+alias pl='perl -E'
+alias plls='perl -w -Mstrict -Ilib -E'
+alias pls='perl -w -Mstrict -E'
+alias XXX='perl -MXXX -E "XXX eval shift"'
 
 export GOROOT=$HOME/go
 export GOOS=linux
 export GOARCH=386
 export GOBIN=$HOME/bin
-
-alias pl='perl -E'
-alias pls='perl -w -Mstrict -E'
-alias plls='perl -w -Mstrict -Ilib -E'
-alias XXX='perl -MXXX -E "XXX eval shift"'
-alias ack='ack-grep'
-alias ackt='ack --text'
-alias aptitude='aptitude --clean-on-startup'
-
-PATH=$PATH:~/bin
-export PATH
+export PATH=$PATH:~/bin
+export PERL_CPANM_OPT='--sudo --interactive'
