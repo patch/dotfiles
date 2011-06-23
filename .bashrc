@@ -102,10 +102,8 @@ fi
 set -o vi
 
 alias ackt='ack --text'
-alias aptitude='aptitude --clean-on-startup'
 alias pl='perl -E'
-alias plls='perl -w -Mstrict -Ilib -E'
-alias pls='perl -w -Mstrict -E'
+alias pls='perl -w -Mstrict -Ilib -E'
 alias XXX='perl -MXXX -E "XXX eval shift"'
 
 export GOROOT=$HOME/go

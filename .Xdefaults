@@ -1,6 +1,8 @@
 URxvt.background:       #000000
+#URxvt.background:       #ffffff
 #URxvt.foreground:       #ddccbb
 URxvt.foreground:       #ffffff
+#URxvt.foreground:       #000000
 #URxvt.background:       #ffffff
 #URxvt.foreground:       #000000
 URxvt.colorBD:          #ffffff
