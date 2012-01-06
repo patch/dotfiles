@@ -17,9 +17,8 @@ URxvt.jumpScroll:       true
 URxvt.scrollBar:        false
 URxvt.saveLines:        0
 URxvt.imLocale:         en_US.UTF-8
-URxvt.font:             xft:Inconsolata-11
-#URxvt.font:             xft:Inconsolata-8
-#URxvt.font:             xft:Inconsolata-13:weight=bold
+URxvt.font:             xft:inconsolata:pixelsize=15:antialias=true:hinting=true,\
+                        xft:symbola:antialias=true:hinting=true
 
 #URxvt.transparent:      false
 #URxvt.tintColor:        white
