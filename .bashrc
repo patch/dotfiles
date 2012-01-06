@@ -101,14 +101,32 @@ fi
 # patch
 set -o vi
 
-alias ackt='ack --text'
-alias pl='perl -E'
+alias pl='perl -Ilib -E'
+alias plw='perl -w -Ilib -E'
 alias pls='perl -w -Mstrict -Ilib -E'
-alias XXX='perl -MXXX -E "XXX eval shift"'
+alias plx='perl -MXXX -Ilib -E'
+alias XXX='perl -MXXX -Ilib -E "XXX eval shift"'
+alias plcore='pls "say Module::CoreList->first_release(shift, shift)" -MModule::CoreList'
+alias ack='ack-grep'
+alias ackt='ack --text'
+alias sqlplus='rlwrap -ac sqlplus'
 
+export PATH=$PATH:~/bin:~/perl5/bin
+export EDITOR=vim
+export PERL_CPANM_OPT='--sudo --interactive'
 export GOROOT=$HOME/go
+export GOBIN=$HOME/bin
 export GOOS=linux
 export GOARCH=386
-export GOBIN=$HOME/bin
-export PATH=$PATH:~/bin
-export PERL_CPANM_OPT='--sudo --interactive'
+
+if [ `locale charmap` = 'UTF-8' ]; then
+    if [ $UID = 0 ]; then
+        export PS1='\[\e[0;35m\]${debian_chroot:+($debian_chroot)}\u@\h:\w\[\e[1;36m\]★ \[\e[0m\]'
+    else
+        export PS1='\[\e[0;35m\]${debian_chroot:+($debian_chroot)}\u@\h:\w\[\e[1;36m\]☆ \[\e[0m\]'
+    fi
+else
+    export PS1='\[\e[0;35m\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ \[\e[0m\]'
+fi
+
+source ~/perl5/perlbrew/etc/bashrc
