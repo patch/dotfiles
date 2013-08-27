@@ -119,6 +119,11 @@ export GOBIN=$HOME/bin
 export GOOS=linux
 export GOARCH=386
 
+# increase timeout to one week if less
+if [ $TMOUT < 604800 ]; then
+    export export TMOUT=604800;
+fi
+
 if [ `locale charmap` = 'UTF-8' ]; then
     if [ $UID = 0 ]; then
         export PS1='\[\e[0;35m\]${debian_chroot:+($debian_chroot)}\u@\h:\w\[\e[1;36m\]★ \[\e[0m\]'
