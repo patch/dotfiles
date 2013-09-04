@@ -121,7 +121,7 @@ export GOARCH=386
 
 # increase timeout to one week if less
 if [ $TMOUT < 604800 ]; then
-    export export TMOUT=604800;
+    export TMOUT=604800;
 fi
 
 if [ `locale charmap` = 'UTF-8' ]; then
